@@ -1,0 +1,20 @@
+name: auto_translate_text_widget_example
+description: Example app demonstrating auto_translate_text_widget package.
+publish_to: 'none'
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  auto_translate_text_widget:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
