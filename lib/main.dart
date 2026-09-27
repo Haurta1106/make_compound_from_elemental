@@ -52,7 +52,7 @@ class MyLoadingState extends State<MyLoadingPage> {
   void initState() {
     super.initState();
 
-    controller = VideoPlayerController.asset('/movies/LoadingMovie.mp4')
+    controller = VideoPlayerController.asset('movies/LoadingMovie.mp4')
     ..initialize().then((_) {
       setState(() {
         
