@@ -501,7 +501,7 @@ class mystate extends State<Mypage> {
                                                 audioPlayer.setVolume(isBGMOn? 1 : 0);
                                                 Navigator.push(context, MaterialPageRoute(builder: (_) => MyHowToPlayPage(point: point, level: level, makedCompounds: makedCompounds, BGM: audioPlayer)));
                                               },
-                                              child: AutoTranslateText("遊び方",style: TextStyle(color: Colors.black,fontSize: 40),),
+                                              child: AutoTranslateText("遊び方（PC専用）",style: TextStyle(color: Colors.black,fontSize: 40),),
                                               style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.green[300]), fixedSize: WidgetStatePropertyAll(Size(500, 100)))
                                             ,),
                                             SizedBox(height: 100,),
