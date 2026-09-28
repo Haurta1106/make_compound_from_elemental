@@ -73,7 +73,7 @@ class MyLoadingState extends State<MyLoadingPage> {
 
   Future<void> initAudio() async {
     audioPlayer.audioCache = AudioCache(prefix: "");
-    final source = AssetSource("audio/MakeCompoundFromElemental_BGM_Loading.wav");    
+    final source = AssetSource("assets/audio/MakeCompoundFromElemental_BGM_Loading.wav");    
     await audioPlayer.play(source);
     await audioPlayer.stop();
     await audioPlayer.resume();
@@ -287,7 +287,7 @@ class mystate extends State<Mypage> {
 
   Future<void> initAudio() async {
     audioPlayer.audioCache = AudioCache(prefix: "");
-    final source = AssetSource("audio/MakeCompoundFromElemental_BGM.wav");    
+    final source = AssetSource("assets/audio/MakeCompoundFromElemental_BGM.wav");    
     await audioPlayer.play(source);
     await audioPlayer.setReleaseMode(ReleaseMode.loop);    
   }
@@ -388,7 +388,7 @@ class mystate extends State<Mypage> {
                                           mainAxisAlignment: MainAxisAlignment.center,
                                           children: [
                                             SizedBox(height: 200,),
-                                            Image.asset("/images/TitlePic.jpeg", width: 960, height: 540,),
+                                            Image.asset("assets/images/TitlePic.jpeg", width: 960, height: 540,),
                                             SizedBox(height: 50,),
                                             Column(mainAxisAlignment: MainAxisAlignment.center,
                                             children: [

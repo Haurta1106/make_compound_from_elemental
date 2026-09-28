@@ -448,7 +448,7 @@ class mygamestate extends State<Mygamepage> {
 
   Future<void> initAudio() async {
     audioPlayer.audioCache = AudioCache(prefix: "");
-    final source = AssetSource("audio/MakeCompoundFromElemental_Pop.wav");    
+    final source = AssetSource("assets/audio/MakeCompoundFromElemental_Pop.wav");    
     await audioPlayer.play(source);   
     await audioPlayer.setReleaseMode(ReleaseMode.release); 
     await audioPlayer.setVolume(1);
@@ -1032,10 +1032,10 @@ class mygamestate extends State<Mygamepage> {
     List<Widget> makeshowlist = [];    
 
     List<List<String>> showstr = [
-      ["/images/HydrogenMippy.png","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","/images/HeliumMippy.png",],
-      ["/images/LithiumMippy.png","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","/images/BerylliumMippy.png",],
-      ["/images/BoronMippy.png","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","/images/IronMippy.png",],
-      ["/images/GoldMippy.png","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","/images/BismuthMippy.png",],
+      ["assets/images/HydrogenMippy.png","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","assets/images/HeliumMippy.png",],
+      ["assets/images/LithiumMippy.png","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","assets/images/BerylliumMippy.png",],
+      ["assets/images/BoronMippy.png","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","assets/images/IronMippy.png",],
+      ["assets/images/GoldMippy.png","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","assets/images/BismuthMippy.png",],
     ];
 
     for (var element in showstr) {
@@ -1381,7 +1381,7 @@ class mygamestate extends State<Mygamepage> {
                                                     });
                                                   }, child: isCombination? AutoTranslateText("結合モード", style: TextStyle(fontSize: 20*size),) : AutoTranslateText("結合しないモード", style: TextStyle(fontSize: 20*size),)
                                                   ,style: ButtonStyle(fixedSize: WidgetStatePropertyAll(Size(300*size, 50*size))),) : Text(""),
-                                                  widget.gamemodesettings == gamemode.freedom? Image.asset(isCombination? "images/Combination.png" : "images/NotCombination.png",width: 300*size,height: 100*size,) : Text(""),
+                                                  widget.gamemodesettings == gamemode.freedom? Image.asset(isCombination? "assets/images/Combination.png" : "assets/images/NotCombination.png",width: 300*size,height: 100*size,) : Text(""),
                                                   widget.gamemodesettings == gamemode.puzzle? ElevatedButton(onPressed: () {setState(() {
                                                     puzzle();
                                                   });}, child: AutoTranslateText("シャッフル", style: TextStyle(fontSize: 20*size),),style: ButtonStyle(fixedSize: WidgetStatePropertyAll(Size(300*size, 50*size)))) : ElevatedButton(onPressed: () {
@@ -1582,27 +1582,27 @@ class MyGame extends FlameGame {
           );
 
     if (compound == "H2O") {
-      final image = await images.load("/images/Effects_H2O.png");
+      final image = await images.load("assets/images/Effects_H2O.png");
       final sprite = Sprite(image);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(100*size2, 100*size2),position: canvasSize/2,anchor: Anchor.center);
       add(EffectImage);
       EffectImage.add(bigSizeEffect);
     } else if (compound == "O2") {
-      final image = await images.load("/images/Effects_O2.png");
+      final image = await images.load("assets/images/Effects_O2.png");
       final sprite = Sprite(image);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(100*size2, 100*size2),position: Vector2(0,0));
       add(EffectImage);
       EffectImage.add(MoveUpEffect);
     } else if (compound == "H2") {
-      final image = await images.load("/images/Effects_H2.png");
+      final image = await images.load("assets/images/Effects_H2.png");
       final sprite = Sprite(image);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(100*size2, 100*size2),position: canvasSize/2, anchor: Anchor.center);
       add(EffectImage);
       EffectImage.add(RotateRight);
     } else if (compound == "O3") {
-      final image = await images.load("/images/Effects_O3_1.png");
+      final image = await images.load("assets/images/Effects_O3_1.png");
       final sprite = Sprite(image);
-      final image2 = await images.load("/images/Effects_O3_2.png");
+      final image2 = await images.load("assets/images/Effects_O3_2.png");
       final sprite2 = Sprite(image2);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(100*size2, 100*size2),position: canvasSize/2, anchor: Anchor.center);
       SpriteComponent EffectImage2 = SpriteComponent(sprite: sprite2, size: Vector2(100*size2, 100*size2),position: canvasSize/2, anchor: Anchor.center);
@@ -1611,33 +1611,33 @@ class MyGame extends FlameGame {
       EffectImage.add(Glow);
       EffectImage2.add(HideThenShow);
     } else if (compound == "LiCl") {
-      final image = await images.load("/images/Effects_LiCl.png");
+      final image = await images.load("assets/images/Effects_LiCl.png");
       final sprite = Sprite(image);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(100*size2, 100*size2),position: Vector2(0,0));
       add(EffectImage);
       EffectImage.add(bigSizeEffect);
     } else if (compound == "NaCl") {
-      final image = await images.load("/images/Effects_NaCl.png");
+      final image = await images.load("assets/images/Effects_NaCl.png");
       final sprite = Sprite(image);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(100*size2, 100*size2),position: Vector2(0,0));
       add(EffectImage);
       EffectImage.add(bigSizeEffect);
     } else if (compound == "KCl") {
-      final image = await images.load("/images/Effects_KCl.png");
+      final image = await images.load("assets/images/Effects_KCl.png");
       final sprite = Sprite(image);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(100*size2, 100*size2),position: Vector2(0,0));
       add(EffectImage);
       EffectImage.add(bigSizeEffect);
     } else if (compound == "SiO2") {
-      final image = await images.load("/images/Effects_SiO2.png");
+      final image = await images.load("assets/images/Effects_SiO2.png");
       final sprite = Sprite(image);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(75*size2,75*size2), position: canvasSize/2, anchor: Anchor.center);
       add(EffectImage);
       EffectImage.add(RotateRightThenRotateLeft);
     } else if (compound == "CO2") {
-      final image = await images.load("/images/Effects_CO2_1.png");
+      final image = await images.load("assets/images/Effects_CO2_1.png");
       final sprite = Sprite(image);
-      final image2 = await images.load("/images/Effects_CO2_2.png");
+      final image2 = await images.load("assets/images/Effects_CO2_2.png");
       final sprite2 = Sprite(image2);            
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(117*size2,78*size2), position: canvasSize/2, anchor: Anchor.center);
       SpriteComponent? EffectImage2 = SpriteComponent(sprite: sprite2, size: Vector2(117*size2,78*size2), position: canvasSize/2, anchor: Anchor.center);
@@ -1646,9 +1646,9 @@ class MyGame extends FlameGame {
       add(EffectImage2);
       EffectImage2.add(HideThenShow2);
     } else if (compound == "NH3") {
-      final image = await images.load("/images/Effects_NH3_1.png");
+      final image = await images.load("assets/images/Effects_NH3_1.png");
       final sprite = Sprite(image);
-      final image2 = await images.load("/images/Effects_NH3_2.png");
+      final image2 = await images.load("assets/images/Effects_NH3_2.png");
       final sprite2 = Sprite(image2);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(75*size2,75*size2), position: canvasSize/2, anchor: Anchor.center);
       SpriteComponent? EffectImage2 = SpriteComponent(sprite: sprite2, size: Vector2(75*size2,75*size2), position: canvasSize/2, anchor: Anchor.center);      
@@ -1656,7 +1656,7 @@ class MyGame extends FlameGame {
       EffectImage.add(BigSize);
       add(EffectImage2);
     } else {
-      final image = await images.load("/images/CompoundMippy.png");
+      final image = await images.load("assets/images/CompoundMippy.png");
       final sprite = Sprite(image);
       EffectImage = SpriteComponent(sprite: sprite, size: Vector2(40*size2,100*size2), position: canvasSize/2, anchor: Anchor.center);
       add(EffectImage);
