@@ -68,8 +68,59 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/audio/MakeCompoundFromElemental_BGM_Loading.wav
+    - assets/audio/MakeCompoundFromElemental_BGM.wav
+    - assets/audio/MakeCompoundFromElemental_Pop.wav
+    - assets/images/BerylliumMippy.png
+    - assets/images/BismuthMippy.png
+    - assets/images/BoronMippy.png
+    - assets/images/Combination.png
+    - assets/images/CompoundMippy.png
+    - assets/images/Effects_CO2_1.png
+    - assets/images/Effects_CO2_2.png
+    - assets/images/Effects_H2.png
+    - assets/images/Effects_H2O.png
+    - assets/images/Effects_KCl.png
+    - assets/images/Effects_LiCl.png
+    - assets/images/EFfects_NaCl.png
+    - assets/images/Effects_NH3_1.png
+    - assets/images/Effects_NH3_2.png
+    - assets/images/Effects_O2.png
+    - assets/images/Effects_O3_1.png
+    - assets/images/Effects_O3_2.png
+    - assets/images/Effects_SiO2.png
+    - assets/images/GoldMippy.png
+    - assets/images/HeliumMippy.png
+    - assets/images/HydrogenMippy.png
+    - assets/images/IronMippy.png
+    - assets/images/LithiumMippy.png
+    - assets/images/NotCombination.png
+    - assets/images/Rulet_English.png
+    - assets/images/Rulet.png
+    - assets/images/RuletArrow.png
+    - assets/images/TitlePic.jpeg
+    - assets/movies/AutoDropElemental.mp4
+    - assets/movies/BlendOrNotBlend.mp4
+    - assets/movies/CompoundDictionary.mp4
+    - assets/movies/HowToChangeDropingElementalXPosition.mp4
+    - assets/movies/HowToChangeWantDropElementalXPosition.mp4
+    - assets/movies/HowToCopyData.mp4
+    - assets/movies/HowToCopyPlacementID.mp4
+    - assets/movies/HowToDropElemental.mp4
+    - assets/movies/HowToEndTheFreedomGame.mp4
+    - assets/movies/HowToEndTheGame.mp4
+    - assets/movies/HowToLoadData.mp4
+    - assets/movies/HowToLookMadeCompound.mp4
+    - assets/movies/HowToMakeBlueCompound.mp4
+    - assets/movies/HowToMakeCompound.mp4
+    - assets/movies/HowToSeeMadeCompound.mp4
+    - assets/movies/HowToSetPastedPlacementID.mp4
+    - assets/movies/HowToShuffle.mp4    
     - assets/movies/LoadingMovie.mp4
+    - assets/movies/NextAutoDropElemental.mp4
+    - assets/movies/PuzzleAndFreedom.mp4
+    - assets/movies/ScreenSizeFreedom.mp4
+    - assets/movies/ScreenSizePuzzle.mp4
 
   # To add assets to your application, add an assets section, like this:
   # assets:
