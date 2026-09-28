@@ -19,7 +19,68 @@ class myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyLoadingPage(),);
+    return MaterialApp(home: MyStartPage(),);
+  }
+}
+
+class MyStartPage extends StatefulWidget {
+  const MyStartPage({Key? key,}) : super(key: key);
+
+  @override
+  State<MyStartPage> createState() => MyStartState();
+}
+
+class MyStartState extends State<MyStartPage> {
+  final ScrollController height = ScrollController();
+  final ScrollController width = ScrollController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Scrollbar(
+                    radius: Radius.circular(4),
+                    thumbVisibility: true,
+                    thickness: 8,
+                    controller: height,
+                    child: Scrollbar(
+                    radius: Radius.circular(4),
+                    thumbVisibility: true,
+                    thickness: 8,
+                    controller: width,
+                    notificationPredicate: (notification) => notification.depth == 1,
+                    child:  SingleChildScrollView(
+                                  scrollDirection: Axis.vertical,
+                                  controller: height,
+                                  child:
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      controller: width,
+                                      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                                        SizedBox(height: 200,),
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.push(context, MaterialPageRoute(builder: (_) => MyLoadingPage()));                                            
+                                          },
+                                          child: AutoTranslateText("PCでプレイ",style: TextStyle(color: Colors.black,fontSize: 40),),
+                                          style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[300]), fixedSize: WidgetStatePropertyAll(Size(500, 100)))
+                                        ,),
+                                        SizedBox(height: 100,),
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.push(context, MaterialPageRoute(builder: (_) => Mypage(point: 0,level: 0, size: 100, makedCompounds: [], BGM: AudioPlayer(),)));                                 
+                                          },
+                                          child: AutoTranslateText("PC以外でプレイ",style: TextStyle(color: Colors.black,fontSize: 40),),
+                                          style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.lightGreen[300]), fixedSize: WidgetStatePropertyAll(Size(500, 100)))
+                                        ,),
+                                        SizedBox(height: 200,),
+                                      ],),
+      ),
+                    )
+                    )
+        )
+      )
+    );
   }
 }
 
